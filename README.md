@@ -1,7 +1,3 @@
-# react-parcel-boilerplate
+# React based Low Level Design Challenges
 
-1. Clone the Repository  
-2. In your terminal:  `cd {path/to/repositoryName}`  
-3. Run the following commands:  
-    - `npm install`  
-    - `npm start`
+In this repo, I've worked out the Low Level Design challenges that are generally asked in Frontend Interviews

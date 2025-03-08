@@ -3,6 +3,7 @@ import TicTacToe from "./pages/TicTacToe";
 import DigitalClock from "./pages/DigitalClock";
 import TrafficLight from "./pages/TrafficLight";
 import NestedCheckbox from "./pages/NestedCheckbox";
+import AnalogClock from "./pages/AnalogClock";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
           <Link className="text-lg font-semibold text-blue-600 hover:underline" to="/">TrafficLight</Link>
           <Link className="text-lg font-semibold text-blue-600 hover:underline" to="/tictactoe">TicTacToe</Link>
           <Link className="text-lg font-semibold text-blue-600 hover:underline" to="/digitalclock">DigitalClock</Link>
+          <Link className="text-lg font-semibold text-blue-600 hover:underline" to="/analogclock">AnalogClock</Link>
           <Link className="text-lg font-semibold text-blue-600 hover:underline" to="/nestedCheckbox">Nested Checkbox</Link>
         </nav>
 
@@ -21,6 +23,7 @@ export default function App() {
           <Route path="/" element={<TrafficLight />} />
           <Route path="/tictactoe" element={<TicTacToe />} />
           <Route path="/digitalclock" element={<DigitalClock />} />
+          <Route path="/analogclock" element={<AnalogClock/>} />
           <Route path="/nestedcheckbox" element={<NestedCheckbox />}/>
         </Routes>
       </div>

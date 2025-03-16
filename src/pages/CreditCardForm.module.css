@@ -1,0 +1,83 @@
+.layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: peachpuff;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background: white;
+    padding: 1.5rem;
+    width: 400px;
+    gap: 1.2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formField {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  /* 🔹 Card Details Section (Expiry Month, Year, CVV) */
+  .cardDetails {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    width: 100%;
+  }
+  
+  /* 🔹 Ensuring Inputs Take Equal Space */
+  .cardDetails .formField {
+    flex: 1;
+    min-width: 100px; /* Prevents shrinking too much */
+  }
+  
+  /* 🔹 Ensuring Input Width Consistency */
+  input {
+    border: 2px solid black;
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+  }
+  
+  .errorMessage {
+    color: red;
+    font-size: 0.5rem;
+  }
+  
+  /* 🔹 Make It Responsive (Stack Fields on Small Screens) */
+  @media (max-width: 480px) {
+    .cardDetails {
+      flex-direction: column;
+    }
+  }
+  
+  /* 🔹 Submit Button Styling */
+  .submitButton {
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  .submitButton:hover {
+    background-color: #ff6347;
+  }
+  
+  .form input:focus {
+    outline: none;
+    border: 2px solid #ff7f50;
+  }
+  

@@ -1,0 +1,76 @@
+/* Full Page Layout */
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* Header & Footer */
+  .header, .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Footer should stick to bottom */
+  .footer {
+    margin-top: auto;
+  }
+  
+  /* Main Content Wrapper (Desktop Default) */
+  .container {
+    display: grid;
+    grid-template-columns: clamp(15%, 20%, 25%) 1fr clamp(15%, 20%, 25%);
+    flex-grow: 1;
+  }
+  
+  /* Sidebar Styling */
+  .sidebar, .rightSidebar {
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+  }
+  
+  /* Main Content Styling */
+  .mainContent {
+    background-color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .truncate {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    width: 250px; /* Adjust as needed */
+  }
+  
+  
+  /* 🔹📱 Responsive: Tablet (≤ 768px) */
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;  /* Single column layout */
+      grid-template-rows: auto auto auto; /* Stack in rows */
+    }
+  
+    .sidebar, .rightSidebar {
+      order: 2; /* Move sidebars below main content */
+    }
+  
+    .mainContent {
+      order: 1; /* Main content stays on top */
+    }
+  }
+  
+  /* 🔹📱 Mobile (≤ 480px) */
+  @media (max-width: 480px) {
+    .rightSidebar {
+      display: none;  /* Hide right sidebar */
+    }
+  
+    .sidebar {
+      width: 100%; /* Take full width */
+    }
+  }
+  
